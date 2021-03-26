@@ -1,0 +1,26 @@
+{
+  "name": "openouath-package",
+  "version": "1.0.0",
+  "description": "Npm Package for OpenOuath.cf",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustBeingAbdi/OpenOuath-package.git"
+  },
+  "keywords": [
+    "Ouath",
+    "Package"
+  ],
+  "author": "Abdi Hassan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustBeingAbdi/OpenOuath-package/issues"
+  },
+  "homepage": "https://github.com/JustBeingAbdi/OpenOuath-package#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
