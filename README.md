@@ -8,5 +8,8 @@ OpenOuath Package is a Npm Package made for [OpenOuath](https://github.com/JustB
 
 
 [Docs](https://docs.openouath.cf)
+
 [Website](https://openouath.cf)
+
+[Api](https://api.openouath.cf)
 
