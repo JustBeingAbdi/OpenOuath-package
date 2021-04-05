@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/JustBeingAbdi/OpenOuath-package#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "@types/secure-random-string": "^1.1.0",
+    "axios": "^0.21.1",
+    "secure-random-string": "^1.1.3"
   }
 }
