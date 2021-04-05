@@ -7,7 +7,7 @@ exports.GenerateOuathURL = async function(callback, type) {
 
     if(type === 'github'){
        let stateID = await srs({length:40});
-       SendRequest(`https://api.openouath.cf/github/generate/url/custom?callback=${callback}&state=${stateID}`, 'get');
+       SendRequest(`https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`, 'get');
 
        return `https://ouath.openouath.cf/github/?state=${stateID}`
        
@@ -15,14 +15,14 @@ exports.GenerateOuathURL = async function(callback, type) {
 
     if(type === 'google'){
         let stateID = await srs({length:40});
-       SendRequest(`https://api.openouath.cf/google/generate/url/custom?callback=${callback}&state=${stateID}`, 'get');
+       SendRequest(`https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`, 'get');
 
        return `https://ouath.openouath.cf/google/?state=${stateID}`
     }
 
     if(type === 'facebook'){
         let stateID = await srs({length:40});
-       SendRequest(`https://api.openouath.cf/facebook/generate/url/custom?callback=${callback}&state=${stateID}`, 'get');
+       SendRequest(`https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`, 'get');
 
        return `https://ouath.openouath.cf/facebook/?state=${stateID}`
     }
