@@ -1,6 +1,6 @@
 {
   "name": "openouath-package",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Npm Package for OpenOuath.cf",
   "main": "index.js",
   "scripts": {
