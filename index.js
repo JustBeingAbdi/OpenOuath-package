@@ -7,7 +7,14 @@ exports.GenerateOuathURL = async function(callback, type) {
 
     if(type === 'github'){
        let stateID = await srs({length:40});
-       SendRequest(`https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`, 'get');
+       let GetRequest = axios.default({
+            method: 'GET',
+            url: `https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`,
+            headers: {
+                accept: 'application/json'
+            }
+        });
+       
 
        return `https://ouath.openouath.cf/github/?state=${stateID}`
        
@@ -15,14 +22,26 @@ exports.GenerateOuathURL = async function(callback, type) {
 
     if(type === 'google'){
         let stateID = await srs({length:40});
-       SendRequest(`https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`, 'get');
+       let GetRequest = axios.default({
+            method: 'GET',
+            url: `https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`,
+            headers: {
+                accept: 'application/json'
+            }
+        });
 
        return `https://ouath.openouath.cf/google/?state=${stateID}`
     }
 
     if(type === 'facebook'){
         let stateID = await srs({length:40});
-       SendRequest(`https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`, 'get');
+        let GetRequest = axios.default({
+            method: 'GET',
+            url: `https://api.openouath.cf/custom/generate/url?callback=${callback}&state=${stateID}`,
+            headers: {
+                accept: 'application/json'
+            }
+        });
 
        return `https://ouath.openouath.cf/facebook/?state=${stateID}`
     }
@@ -59,27 +78,5 @@ exports.GetUserInfo = async function(access_token, type) {
     }).then(async(response) => {
             return response.data;
         });
-    }
-}
-
-exports.SendRequest = async(url, type) => {
-
-    if(type === 'get'){
-        let GetRequest = axios.default({
-            method: 'GET',
-            url: url,
-            headers: {
-                accept: 'application/json'
-            }
-        });
-    } else {
-        let PostRequest = axios.default({
-            method: 'POST',
-            url: url,
-            headers: {
-                accept: 'application/json'
-            }
-        });
-        
     }
 }
