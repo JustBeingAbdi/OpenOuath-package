@@ -1,0 +1,1 @@
+export * as MainConfig from "./main.json";

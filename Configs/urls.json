@@ -1,0 +1,9 @@
+{
+    "api": "https://api.openouath.cf",
+    "apiv2": "https://api.v2.openouath.cf",
+    "ouath": "https://ouath.openouath.cf",
+    "ouath2": "https://auth.openouath.cf",
+    "ouathv2": "https://ouath.v2.openouath.cf",
+    "app": "https://openouath.cf",
+    "appv2": "https://v2.openouath.cf"
+}
